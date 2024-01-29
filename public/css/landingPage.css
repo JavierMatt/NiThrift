@@ -1,0 +1,330 @@
+
+*{
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.navbar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1vh .5vh;
+    margin: 1vh 0vh;
+}
+
+h1{
+    font-weight: 900;
+}
+
+.navbar ul{
+    margin-bottom: 0;
+}
+
+/* untuk bagian navbar */
+.navbar ul li {
+    display: inline-block;
+    padding: 1.5vh 1vh;
+    margin-left: 1vh;
+    font-size: large;
+    font-weight: 300;
+    font-size: 1.3em;
+    transition: all 110ms ease-in-out;
+    text-align: center;
+}
+
+/* untuk animasi garis dibawah tulisan navbar ketika di hover  */
+.navbar ul li::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background-color: black;
+    margin: auto;
+    display: flex;
+    transition: all 350ms ease-in-out;
+}
+
+/* ketika di hover */
+.navbar ul li:hover::after{
+    width: 70%;
+    transition: width 0.3s linear;
+}
+
+
+a {
+    text-decoration: none;
+    color: black;
+    transition: all 100ms ease-in-out;
+}
+
+/* a:hover{
+    transition-delay: 50ms;
+} */
+
+.rightNav{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-right: -7rem;
+}
+
+.ms-n7{
+    margin-left: -11rem;
+}
+
+.margin-left-4{
+    margin-left: -8rem;
+}
+
+.searchBar{
+    width: 250px;
+    height: 25px;
+    border: 2px solid rgba(0,0,0,0.2);
+    border-radius: 15px;
+    background-color: rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.cart img{
+    position: relative;
+    padding: 5%;
+    width: 3vh;
+    height: 3vh;
+    /* top: 30%; */
+    /* bottom: -50%; */
+}
+
+.vline{
+    border-left: 2px solid gray;
+    height: 3vh;
+    margin: 0vh 2vh;
+}
+
+.detailuser{
+    right: -20px;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    border-radius: 25px;
+    align-items: center;
+    cursor:pointer;
+}
+
+.userProfile{
+    width: 35px;
+    height: 35px;
+    background-size: cover;
+    border-radius: 60%;
+}
+
+figcaption{
+    margin-left: 5px;
+    margin-top: 8px;
+}
+
+/* Untuk Highlight Container*/
+.highlight-container{
+    max-width: 1000px;
+    position: absolute;
+    margin: auto;
+}
+
+.mySlides{
+    display: none;
+}
+
+.himage{
+    max-height: 400px;
+    object-fit: contain;
+}
+
+.dimage{
+    max-width: 400px;
+    max-height: 300px;
+}
+
+/* Arrow <- , -> in product highlihht*/
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 40%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 6px 6px 0;
+    background-color: rgba(0,0,0,0.1);
+    user-select: none;
+}
+
+.next {
+    right: 3%;
+    border-radius: 6px 0 0 6px;
+}
+
+.prev{
+    left: 3%;
+}
+  
+  /* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
+.active:hover {
+    background-color: #717171;
+  }
+  
+  /* Fading animation */
+.fade {
+    animation-name: fade;
+    animation-duration: 3.5s;
+}
+
+@keyframes fade{
+    from{ opacity: .4; }
+    to { opacity: 1; }
+}
+
+/* for figCaption */
+.test{
+    text-align: center;
+    /* display: none; */
+}
+
+/* container for Recommendation 'For you' */
+.forYou{
+    display: grid;
+    grid-template-columns: repeat(5, auto);
+    grid-gap: 4%;
+    justify-content: center;
+    margin: 2%;
+    /* background-color: rgba(0, 0, 0, 0.19); */
+}
+
+.card{
+    width: 20vh;
+    height: 25vh;
+    margin: 2% 2%;
+    padding: 5%;
+    border-radius: 15px;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transition: all 0.25s ease-in-out;
+}
+
+.card:hover{
+    background-color: rgba(0,0,0,0.09);
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+.catalog{
+    object-fit:cover;
+    width: 150px;
+    height: 170px;
+}
+
+/* for caption product Catalog like Price IDR n productName */
+.caption{
+    margin: -3%;
+}
+
+.price{
+    color: green;
+}
+
+.foot{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: rgb(162, 162, 162);
+    height: 25vh;
+    align-items: center;
+    padding: 5%;
+}
+
+.label{
+    height: 5vh;
+    background-color: red;
+    color: white;
+    text-align: center;
+    margin: auto;
+    padding: .5%;
+}
+
+.logo{
+    height: 10vh;
+    width: 5vh;
+}
+
+.limit{
+    height: 8vh;
+}
+
+.socmed ul{
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+   align-items: center;
+}
+
+.socmed ul a {
+    margin: 5%;
+}
+
+.women-container{
+    display: grid;
+    grid-template-columns: repeat(5, auto);
+    grid-gap: 4%;
+    justify-content: center;
+    bottom: 5vh;
+    margin: 2% 12%;
+    padding: 4% 2%;
+    border-radius: 10px;
+    background-color: #f3f3f3;
+}
+
+.men-container{
+    display: grid;
+    grid-template-columns: repeat(5, auto);
+    grid-gap: 4%;
+    justify-content: center;
+    bottom: 5vh;
+    margin: 2% 12%;
+    padding: 4% 5%;
+    border-radius: 10px;
+    background-color: #f3f3f3;
+}
+  
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+/* untuk updateProduct.blade.php  */
+.upload-product {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+}
+
+#imgPreview{
+    width: 750px;
+    height: 400px;
+    border: 2px solid black;
+    border-radius: 15px;
+    background-position: center;
+    background-size: cover;
+}
